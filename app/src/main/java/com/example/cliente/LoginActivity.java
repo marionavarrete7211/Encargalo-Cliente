@@ -71,6 +71,7 @@ public class LoginActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                //Cambiar error por algo más
                 Toast.makeText(LoginActivity.this,error.toString(),Toast.LENGTH_LONG).show();
             }
         }){

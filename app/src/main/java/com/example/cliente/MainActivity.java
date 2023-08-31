@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
                 super.onAuthenticationError(errorCode, errString);
-                iralogin();
+                iraMenu();
             }
 
             @Override
@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
             public void onAuthenticationFailed() {
                 super.onAuthenticationFailed();
                 Toast.makeText(MainActivity.this, "Ups!, ha ocurrido un fallo en la autenticacion...", Toast.LENGTH_SHORT).show();
-
             }
         });
 
@@ -81,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 if (valor.equals("1")){
                     biometricPrompt.authenticate(promptInfo);
                 }else {
-                    iralogin();
+                    iraMenu();
                 }
 
             }
